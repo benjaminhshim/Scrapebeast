@@ -1,0 +1,102 @@
+body {
+    box-sizing: border-box;
+    background: black;
+    color: white;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+h2{
+    letter-spacing: 2px;
+}
+
+h4 {
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-top: 0px;
+}
+
+#scrape-buttons {
+    margin-top: 50px;
+}
+
+#scrape-buttons a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#drake-banner {
+    height: 600px;
+}
+
+.scraped-container {
+    margin-top: 20px;
+    clear: both;
+    overflow: hidden;
+}
+
+.scraped-container h3 {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin: 40px 0px;
+}
+
+.scraped-container h4 {
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+.scraped-container a {
+    color: red;
+}
+
+.scraped-container a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.scraped-container img {
+    width: 450px;
+    height: 300px;
+    /* float: left; */
+    margin-bottom: 40px;
+    margin-right: 25px;
+}
+
+.scraped-container p {
+    color: white;
+}
+
+
+#bookmark-icon {
+    /* float: right; */
+    font-size: 20px;
+    margin-top: 165px;
+}
+
+#bookmark-icon:active {
+    border: none;
+}
+
+.article {
+    overflow: hidden;
+    clear: both;
+}
+
+.article img {
+    float: left;
+}
+
+
+
+
+
+

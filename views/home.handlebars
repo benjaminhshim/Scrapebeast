@@ -1,0 +1,21 @@
+{{> header}}
+
+
+<div class="container scraped-container">
+    <h3 id="articles-title">ARTICLES</h3>
+
+    
+        {{#each data}}
+            {{#unless saved}}
+                <div class="article" data-id={{_id}}>
+                    <img src={{img_url}}>
+                    <h4>{{headline}}</h4>
+                    <a href={{link}}>{{link}}</a>
+                    <br>
+                    <button class='fa fa-bookmark-o' id='bookmark-icon'></button>
+                    <hr>
+                </div>
+            {{/unless}}
+        {{/each}}
+
+</div>
