@@ -27,7 +27,7 @@ app.use(express.static("public"));
 
 // mongoose.connect("mongodb://localhost/scrapebeast_db");
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://<dbuser>:<dbpassword>@ds129801.mlab.com:29801/scrapebeast";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://benjaminhshim:scr4p3b34st@ds129801.mlab.com:29801/scrapebeast";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
   useMongoClient: true
