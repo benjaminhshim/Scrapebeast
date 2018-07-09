@@ -9,6 +9,12 @@ var HeadlineSchema = new Schema({
     unique: true,
     multi: false
   },
+  summary: {
+    type: String,
+    required: true,
+    unique: true,
+    multi: false
+  },
   link: {
     type: String,
     required: true,
@@ -21,14 +27,22 @@ var HeadlineSchema = new Schema({
     unique: true,
     multi: false
   },
+  // hypes: {
+  //   type: Number,
+  //   required: true,
+  //   multi: false
+  // },
   saved: {
     type: Boolean,
-    defaul: false
+    default: false
   },
-  note: {
-    type: Schema.Types.ObjectId,
-    ref: "Note"
-  }
+  notes: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Note"
+    }
+  ]
+
 });
 
 var Headline = mongoose.model("Headline", HeadlineSchema);

@@ -7,24 +7,36 @@ body {
 header {
     color: white;
     text-align: center;
+    min-height: 100vh;
 }
 
 nav a:hover {
     text-decoration: none;
 }
 
+nav .fw4 {
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
 h2{
-    letter-spacing: 2px;
+    font-size: 46px;
+    letter-spacing: 4px;
 }
 
 h4 {
     font-size: 16px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     margin-top: 0px;
 }
 
+/* #mongo-icon {
+    width: 100px;
+} */
+
 #scrape-buttons {
     margin-top: 50px;
+    letter-spacing: 2px;
 }
 
 #scrape-buttons a:hover {
@@ -32,38 +44,51 @@ h4 {
     color: white;
 }
 
-#drake-banner {
-    height: 600px;
+.bg-black-80 {
+    min-height: 100vh;
 }
 
-.scraped-container {
+#drake-banner {
+    min-height: 100vh;
+}
+
+.scraped-container,
+.saved-container {
     margin-top: 20px;
     clear: both;
     overflow: hidden;
 }
 
-.scraped-container h3 {
+.scraped-container h3,
+.saved-container h3 {
     text-align: center;
-    font-size: 24px;
-    letter-spacing: 2px;
+    font-size: 18px;
+    letter-spacing: 3px;
     margin: 40px 0px;
 }
 
-.scraped-container h4 {
+.scraped-container h4,
+.saved-container h4 {
     letter-spacing: 1px;
     font-size: 24px;
+    width: 80%;
+    font-weight: 700;
+
 }
 
-.scraped-container a {
+.scraped-container a,
+.saved-container a {
     color: red;
 }
 
-.scraped-container a:hover {
+.scraped-container a:hover,
+.saved-container a:hover {
     text-decoration: none;
     color: white;
 }
 
-.scraped-container img {
+.scraped-container img,
+.saved-container img {
     width: 450px;
     height: 300px;
     /* float: left; */
@@ -71,15 +96,30 @@ h4 {
     margin-right: 25px;
 }
 
-.scraped-container p {
+.scraped-container p,
+.saved-container p {
     color: white;
+}
+
+#unsave {
+    border: 1px solid white;
+    color: white;
+    margin-top: 85px;
+    float: left;
+}
+
+#notes {
+    margin-top: 85px;
+    color: white;
+    float: left;
+    margin-right: 20px;
 }
 
 
 #bookmark-icon {
     /* float: right; */
     font-size: 20px;
-    margin-top: 165px;
+    margin-top: 100px;
 }
 
 #bookmark-icon:active {
@@ -95,8 +135,78 @@ h4 {
     float: left;
 }
 
+.article p {
+    color: gray;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.article a {
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+#hypes {
+    font-size: 12px;
+}
 
 
 
+/* ========= MODAL ========== */
+#notes-modal {
+    color: black;
+}
 
+.modal-dialog {
+    width: 50%;
+}
 
+.modal-content {
+    border-radius: 0px;
+}
+
+.modal-content textarea {
+    margin-top: 20px;
+}
+
+#exampleModalLongTitle {
+    text-align: center;
+}
+
+.modal-body {
+    border: 1px solid lightgray;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.modal-body p {
+    color: black;
+
+}
+
+#delete-note-span {
+    float: right;
+}
+
+.note-body {
+    margin-bottom: 20px;
+}
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+.modal-content textarea {
+    width: 70%;
+    float: left;
+    margin-left: 50px;
+    resize: none;
+
+}
+
+#new-note-btn {
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}

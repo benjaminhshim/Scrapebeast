@@ -1,21 +1,27 @@
 {{> header}}
 
-
-<div class="container scraped-container">
-    <h3 id="articles-title">ARTICLES</h3>
-
+<div class="container saved-container">
+    <h3 id="articles-title">SAVED</h3>
     
         {{#each data}}
             {{#if saved}}
                 <div class="article" data-id={{_id}}>
                     <img src={{img_url}}>
                     <h4>{{headline}}</h4>
+                    <p>{{summary}}</p>
                     <a href={{link}}>{{link}}</a>
+                    
                     <br>
-                    <button id='unsave'>UNSAVE</button>
+                    <button class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" id="notes" data-toggle="modal" data-id={{_id}} data-target="#notes-modal">NOTES</button>
+                    <a class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" id="unsave">UNSAVE</a>
+                    
                     <hr>
                 </div>
+
+                {{> modal}}
+
             {{/if}}
         {{/each}}
 
 </div>
+

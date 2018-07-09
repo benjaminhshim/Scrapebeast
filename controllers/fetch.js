@@ -4,19 +4,29 @@ var db = require('../models');
 var axios = require("axios");
 var cheerio = require("cheerio");
 
+// DISPLAY UNSAVED ARTICLES
 exports.index = function(req, res) {
-  
   db.Headline.find({})
   .then(data =>{
-
     res.render('home', {data});
-
-  }).then(err => {
+  }).catch(err => {
     return res.json(error);
   });
+};
 
-}
+// DISPLAY SAVED ARTICLES
+exports.saved = function(req, res) {
+  db.Headline.find({saved: true})
+  .populate("notes")
+  .then(data =>{
+    res.render('saved', {data});
 
+  }).catch(err => {
+    return res.json(err);
+  });
+};
+
+// SCRAPE ARTICLES
 exports.fetch = function(req, res) {
     axios.get("https://hypebeast.com/music").then(function(response) {
       var $ = cheerio.load(response.data);
@@ -25,8 +35,10 @@ exports.fetch = function(req, res) {
         var result = {};
   
         result.headline = $(this).find("h2").children().text();
+        result.summary = $(this).find('.post-box-content-excerpt').text();
         result.link = $(this).find('.post-box-content-title').find("a").attr("href");
         result.img_url = $(this).find('div.post-box-image-container').find('img').attr('data-src');
+        // result.hypes = $(this).find('span.d-none').children().text();
   
         db.Headline.create(result)
           .then(function(data) {
@@ -40,14 +52,23 @@ exports.fetch = function(req, res) {
     });
 }
 
-exports.saved = function(req, res) {
+// FIND ALL SAVED ARTICLES
+exports.saved_api = function(req, res) {
   db.Headline.find({saved: true})
   .then(data =>{
-
-    res.render('saved', {data});
-
+    res.json(data);
   }).then(err => {
-    return res.json(error);
+    return res.json(err);
   });
 
+}
+
+// FIND ALL UNSAVED ARTICLES
+exports.unsaved_api = function(req, res) {
+  db.Headline.find({saved: false})
+  .then(data => {
+    res.json(data);
+  }).catch(err => {
+    return res.json(err);
+  })
 }

@@ -4,4 +4,5 @@ module.exports = function(app){
 
     app.use('/', index);
     app.use('/headlines', index);
+
 }

@@ -1,0 +1,36 @@
+
+<div class="modal fade" id="notes-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Notes For {{_id}}</h5>
+
+                </button>
+            </div>
+
+            <div class="modal-body">
+                {{#each notes}}
+                    <div class="note-body">{{body}}                    
+                        <span id="delete-note-span" data-id={{_id}}>
+                            <button type="button" id="delete-note" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </span>
+                    </div>
+
+                {{/each}}
+            </div>
+
+            <form>
+                <textarea type="text" name="body" placeholder="Write note here"></textarea>
+                {{!-- <input type="submit" data-id={{_id}} id="new-note-btn"> --}}
+                <div class="modal-footer">
+                    <button class="btn btn-primary f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" type="submit" data-id={{_id}} id="new-note-btn">ADD NOTE</button>
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+</div> 
