@@ -9,7 +9,7 @@ var cheerio = require("cheerio");
 
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -30,9 +30,7 @@ app.use(express.static("public"));
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://benjaminhshim:abc123@ds123181.mlab.com:23181/heroku_9mm7lwk2";
 
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, {
-  useMongoClient: true
-});
+mongoose.connect(MONGODB_URI);
 
 
 
