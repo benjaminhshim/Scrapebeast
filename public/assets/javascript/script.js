@@ -66,6 +66,12 @@ $(document).ready(function() {
         location.reload();
     });
 
+
+
+
+
+
+
     $(document).on('click', '#notes', function() {
         const thisId = $(this).data('id');
         console.log(thisId);
@@ -74,9 +80,16 @@ $(document).ready(function() {
             method: 'GET',
             url: '/headlines/' + thisId
         }).then(data => {
-            console.log(data);
+            console.log(data.notes);
         })
     })
+
+
+
+// 5b42f1f9eed58b0014c73e50
+// 5b42f1f9eed58b0014c73e51
+
+
 
     $(document).on('click', '#new-note-btn', function() {
         event.preventDefault();

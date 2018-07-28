@@ -19,6 +19,7 @@ exports.saved = function(req, res) {
   db.Headline.find({saved: true})
   .populate("notes")
   .then(data =>{
+    console.log(data);
     res.render('saved', {data});
 
   }).catch(err => {

@@ -40,17 +40,28 @@ exports.get_article_note = function(req, res) {
     })
 }
 
+
+
+
+
+
+
 exports.get_headline_note = function(req, res) {
-    db.Headline.findOne({_id: req.params.id })
+    db.Headline.findOne({_id: req.params.id})
     .populate('notes')
     .then(data => {
-        console.log(data);
+        // console.log(data.notes[0].body)
+        // console.log(data.notes.body);
         res.json(data);
         // res.render('saved', {data});
     }).catch(err => {
         res.json(err)
     })
 }
+
+
+
+
 
 
 exports.create_note = function(req, res) {
