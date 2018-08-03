@@ -210,3 +210,190 @@ h4 {
     margin-left: 20px;
     margin-top: 10px;
 }
+
+
+@media only screen and (max-width: 1555px) {
+    .navbar {
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 1265px) {
+
+    .modal-content {
+        clear: both;
+        overflow: auto;
+    }
+    .modal-header {
+        width: 100%;
+        display: block;
+    }
+
+    .modal-body {
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .modal-content textarea {
+        float: none;
+        margin: 0 auto;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .modal-footer {
+        float: none;
+        margin: 0 auto;
+        display: block;
+        
+    }
+    
+    #new-note-btn {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1201px) {
+
+    .saved-articles {
+        clear: both;
+        overflow: auto;
+    }
+    .saved-articles br {
+        display: none;
+    } 
+
+    #notes,
+    #unsave {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .article img {
+        width: 200px;
+        height: 150px;
+    }
+
+    .article p{
+        display: none;
+    }
+
+    .article br {
+        display: none;
+        margin-top: 0;
+    }
+
+    .article h4 {
+        margin-bottom: 0;
+    }
+
+    .article #bookmark-icon {
+        margin-top: 0;
+    }
+
+    .saved-articles br {
+        display: none;
+    } 
+
+    #notes,
+    #unsave {
+        margin-top: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 786px) {
+    #notes-modal {
+        padding: 50px;
+    }
+    .modal-content {
+        width: 175%;
+        display: block;  
+        margin: 0 auto;
+        text-align: center; 
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    .article {
+        clear: both;
+        overflow: auto;
+    }
+    .article img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .article h4 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .article p{
+        /* text-align: center; */
+        margin: 0 auto;
+    }
+
+    .article a{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        /* float: left; */
+    }
+
+    .article #bookmark-icon {
+        display: block;
+        margin-top: 0;
+        /* float: right; */
+        margin-bottom: 20px;
+        /* display: none; */
+        margin: 0 auto;
+    }
+
+    .article br {
+        display: none;
+    }
+
+    #scrape-buttons #scrape-btn {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    #scrape-buttons span {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #scrape-buttons #saved-btn {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    #notes,
+    #unsave {
+        margin: 0 auto;
+        display: block;
+        float: none;
+        width: 50%;
+        margin-top: 15px;
+    }
+
+
+    /* .bg-black-80,
+    #drake-banner {
+        min-height: 250px;
+    } */
+
+
+}
