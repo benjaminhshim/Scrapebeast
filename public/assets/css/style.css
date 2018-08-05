@@ -115,6 +115,16 @@ h4 {
     margin-right: 20px;
 }
 
+#notes:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+#notes:hover {
+    cursor: pointer;
+
+}
+
 
 #bookmark-icon {
     /* float: right; */
@@ -173,6 +183,14 @@ h4 {
     text-align: center;
 }
 
+.modal-title {
+    color: black;
+}
+
+.note-body {
+    color: black;
+}
+
 .modal-body {
     border: 1px solid lightgray;
     width: 60%;
@@ -211,6 +229,9 @@ h4 {
     margin-top: 10px;
 }
 
+#new-note-btn:focus {
+    outline: none;
+}
 
 @media only screen and (max-width: 1555px) {
     .navbar {
@@ -306,7 +327,9 @@ h4 {
         margin-top: 10px;
     }
 
+
 }
+
 
 @media only screen and (max-width: 786px) {
     #notes-modal {

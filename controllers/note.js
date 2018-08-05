@@ -52,6 +52,7 @@ exports.get_headline_note = function(req, res) {
     .then(data => {
         // console.log(data.notes[0].body)
         // console.log(data.notes.body);
+        console.log(data);
         res.json(data);
         // res.render('saved', {data});
     }).catch(err => {

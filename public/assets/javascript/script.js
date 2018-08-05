@@ -72,7 +72,8 @@ $(document).ready(function() {
 
 
 
-    $(document).on('click', '#notes', function() {
+    $(document).on('click', '#notes', function(event) {
+        event.preventDefault();
         const thisId = $(this).data('id');
         console.log(thisId);
 
@@ -80,14 +81,9 @@ $(document).ready(function() {
             method: 'GET',
             url: '/headlines/' + thisId
         }).then(data => {
-            console.log(data.notes);
+            console.log(data);
         })
     })
-
-
-
-// 5b42f1f9eed58b0014c73e50
-// 5b42f1f9eed58b0014c73e51
 
 
 
@@ -106,8 +102,8 @@ $(document).ready(function() {
             method: 'POST',
             data: noteObj
         }).then(data => {
-            console.log(data);
-            location.reload();
+            console.log(data.notes);
+            // location.reload();
         })
         $('form textarea').val('');
     })

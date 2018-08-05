@@ -19,7 +19,7 @@ exports.saved = function(req, res) {
   db.Headline.find({saved: true})
   .populate("notes")
   .then(data =>{
-    console.log(data);
+    // res.json(data);
     res.render('saved', {data});
 
   }).catch(err => {
@@ -56,9 +56,11 @@ exports.fetch = function(req, res) {
 // FIND ALL SAVED ARTICLES
 exports.saved_api = function(req, res) {
   db.Headline.find({saved: true})
+  .populate("notes")
   .then(data =>{
     res.json(data);
-  }).then(err => {
+
+  }).catch(err => {
     return res.json(err);
   });
 

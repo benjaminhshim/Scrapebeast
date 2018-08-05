@@ -4,7 +4,7 @@
     <h3 id="articles-title">SAVED</h3>
     
         {{#each data}}
-            {{#if saved}}
+            {{!-- {{#if saved}} --}}
                 <div class="article saved-articles" data-id={{_id}}>
                     <img src={{img_url}}>
                     <h4>{{headline}}</h4>
@@ -12,16 +12,19 @@
                     <a href={{link}}>{{link}}</a>
                     
                     <br>
-                    <button class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" id="notes" data-toggle="modal" data-id={{_id}} data-target="#notes-modal">NOTES</button>
+                    <button class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" id="notes" data-toggle="modal" data-id={{_id}} data-target="#notes-modal-{{_id}}">NOTES</button>
                     <a class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" id="unsave">UNSAVE</a>
                     
                     <hr>
                 </div>
 
                 {{> modal}}
-
-            {{/if}}
+                {{!-- {{> newModal}} --}}
+            {{!-- {{/if}} --}}
         {{/each}}
+        
 
 </div>
+
+
 
