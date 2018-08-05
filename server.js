@@ -27,10 +27,10 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost/scrapebeast_db");
 
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://benjaminhshim:abc123@ds123181.mlab.com:23181/heroku_9mm7lwk2";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://benjaminhshim:abc123@ds123181.mlab.com:23181/heroku_9mm7lwk2";
 
-// mongoose.Promise = Promise;
-// mongoose.connect(MONGODB_URI);
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 
 
